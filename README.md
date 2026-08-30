@@ -1,2 +1,2 @@
 # wwd131
-BYUI - Courrse Work
+BYUI - Course Work
