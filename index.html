@@ -1,14 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WDD 131 - Home Page</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/getdates.js" defer></script>
+  <meta name="author" content="Rory O'Connell-Maritz">
+  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Rory Maritz - Home Page Layout">
+  <title>WDD 131 - Dynamic Web Fundamentals - Rory Maritz</title>
+
 </head>
 
 <body>
-  <h1>WDD 131 - Maritz</h1>
+  <header>
+    <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+    <nav>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/rory-o-connell-maritz-ba053925/" target="_blank"
+            rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">BYU Canvas</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?lang=eng&id=p26#p26"
+            target="_blank" rel="noopener noreferrer">Scripture</a>
+        </li>
+        <li><a href="final-project.html" target="_blank" rel="noopener noreferrer">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-grid">
+    <h1>Rory O'Connell-Maritz</h1>
+
+    <section class="card about-me">
+      <h2>About Me</h2>
+      <div class="about-me-content">
+        <p>My name is Rory O'Connell-Maritz. I am a South African citizen and a member of The Church of Jesus Christ of
+          Latter-day Saints. I work as a Technical and Operations Director, responsible for the product development of
+          new
+          construction products and ensuring the operational efficiencies are maintained. I have 3 active sons.</p>
+        <img src="images/rory-maritz.webp" alt="Rory O'Connell-Maritz" class="profile-image">
+      </div>
+
+      <h3>South Africa</h3>
+      <div class="flag-section">
+        <figure>
+          <img src="images/south-africa-flag.png" alt="South African Flag" class="flag-image">
+          <figcaption><em>Official Flag of South Africa</em></figcaption>
+        </figure>
+        <p>South Africa is located at the southern tip of the African continent and is bordered by the Atlantic and
+          Indian Oceans. It is renowned for its diverse landscapes, ranging from mountains and savannas to beaches and
+          deserts. The
+          country is home to rich wildlife, including the Big Five—lion, leopard, elephant, rhino, and buffalo—and has
+          several
+          world‑famous national parks such as Kruger National Park. South Africa is also known for its cultural
+          diversity, with
+          eleven official languages and a vibrant mix of traditions, music, and cuisine.
+
+          Sports in South Africa play a major role in national pride. Rugby, cricket, and soccer are the most popular,
+          with the Springboks, Proteas, and Bafana Bafana representing the country internationally. South Africa hosted
+          the
+          2010 FIFA World Cup, the first on African soil, and continues to produce world‑class athletes across many
+          disciplines, from athletics to golf and swimming.</p>
+      </div>
+    </section>
+
+    <aside class="card web-resources">
+      <h2>Web Dev Resources</h2>
+      <ul>
+        <li><a href="https://dev.to/" target="_blank" rel="noopener noreferrer">Dev.to Community</a></li>
+        <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener noreferrer">Smashing Magazine</a>
+        </li>
+        <li><a href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS Tricks</a></li>
+        <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3 Schools</a></li>
+        <li><a href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer">Udemy</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
+        </li>
+        <li><a href="https://web.dev/" target="_blank" rel="noopener noreferrer">Web.dev</a></li>
+        <li><a href="https://www.theodinproject.com/" target="_blank" rel="noopener noreferrer">The Odin Project</a>
+        </li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <footer>
+    <p>© <span id="currentyear"></span> ⫴ Rory Maritz ⫴ South Africa</p>
+    <p id="lastmodified">Last Modified: <span id="lastmodifieddate"></span></p>
+
+  </footer>
 </body>
 
 </html>
