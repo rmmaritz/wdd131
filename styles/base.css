@@ -80,7 +80,9 @@ nav a:hover {
 .main-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: var(--space-md);
+  grid-template-rows: auto 1fr;
+  align-items: stretch;
+  gap: 10px;
   max-width: 1000px;
   margin: var(--space-md) auto;
   padding: 0 var(--space-sm);
@@ -88,6 +90,7 @@ nav a:hover {
 
 .main-grid h1 {
   grid-column: 1 / -1;
+  grid-row: 1;
   text-align: center;
   font-size: var(--font-size-h1);
   margin-bottom: var(--space-md);
@@ -100,6 +103,16 @@ nav a:hover {
   border-radius: 8px;
   padding: var(--space-md);
   box-shadow: var(--shadow-soft);
+}
+
+.about-me {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.location {
+  grid-column: 1;
+  grid-row: 3;
 }
 
 .about-me-content {
@@ -162,6 +175,12 @@ h3 {
   display: inline-block;
   width: 70%;
   text-align: center;
+}
+
+.web-resources {
+  grid-column: 2;
+  grid-row: 2 / span 3;
+
 }
 
 .web-resources ul {
