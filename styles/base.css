@@ -77,7 +77,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.main-grid {
+main {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto 1fr;
@@ -88,7 +88,7 @@ nav a:hover {
   padding: 0 var(--space-sm);
 }
 
-.main-grid h1 {
+main h1 {
   grid-column: 1 / -1;
   grid-row: 1;
   text-align: center;
