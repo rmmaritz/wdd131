@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping List</title>
+  <style>
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    button {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Shopping List</h1>
+  <form>
+    <label for="item">Enter an item:</label>
+    <input id="item" type="text" required>
+    <button>Add Item</button>
+  </form>
+  <ul></ul>
+
+  <script>
+    // Step 1: references
+    const list = document.querySelector("ul");
+    const input = document.querySelector("#item");
+    const button = document.querySelector("form button");
+
+    // Step 2: function to add item
+    function addItem(event) {
+      event.preventDefault(); // stop form refresh
+
+      const value = input.value.trim();
+      if (value === "") return;
+
+      input.value = ""; // clear input
+
+      // Step 3: create elements
+      const li = document.createElement("li");
+      const span = document.createElement("span");
+      const delBtn = document.createElement("button");
+
+      span.textContent = value;
+      delBtn.textContent = "Delete";
+
+      // Step 4: append children
+      li.appendChild(span);
+      li.appendChild(delBtn);
+      list.appendChild(li);
+
+      // Step 5: delete handler
+      delBtn.addEventListener("click", () => {
+        list.removeChild(li);
+      });
+
+      // Step 6: refocus input
+      input.focus();
+    }
+
+    // Step 7: attach event
+    button.addEventListener("click", addItem);
+  </script>
+</body>
+
+</html>
