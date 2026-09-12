@@ -1,0 +1,34 @@
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+}
+
+@media (min-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    position: static;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    width: auto;
+    padding: 0;
+  }
+
+  #menu {
+    display: none;
+  }
+}
