@@ -30,7 +30,15 @@ footer {
   background-color: var(--primary);
   color: var(--neutral);
   text-align: center;
-  padding: 1rem;
+  padding-top: 1rem;
+}
+
+header::after {
+  content: "";
+  display: block;
+  height: 20px;
+  background-color: var(--secondary);
+  margin-top: 0.5rem;
 }
 
 main {
@@ -99,6 +107,15 @@ h2 {
   border-top-right-radius: 6px;
   position: relative;
   z-index: 2;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  margin-top: 0.5rem;
+  border-radius: 2px;
 }
 
 @media (max-width: 900px) {
