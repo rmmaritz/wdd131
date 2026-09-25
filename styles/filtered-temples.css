@@ -1,0 +1,122 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #1e3a5f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+  /* keeps layout responsive */
+  position: relative;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul.navigation {
+  display: none;
+  flex-direction: column;
+  background-color: #1e3a5f;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 150px;
+  padding: 1rem;
+  list-style: none;
+  margin: 0;
+}
+
+nav ul.navigation.show {
+  display: flex;
+}
+
+nav ul.navigation li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav ul.navigation li a:hover {
+  text-decoration: underline;
+}
+
+#menu {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+main h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: #1e3a5f;
+  color: white;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+#lastmodified {
+  font-size: 0.9em;
+  color: white;
+}
+
+#temples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  align-items: stretch;
+}
+
+.temple-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.temple-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.temple-card p {
+  margin: 0.25rem 0;
+  line-height: 1.2rem;
+}
