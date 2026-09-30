@@ -1,0 +1,67 @@
+/* 64em is also 1028px (if basefont is 16px) */
+@media only screen and (min-width: 64rem) {
+
+    header,
+    nav,
+    main,
+    footer {
+        max-width: 64rem;
+        margin: auto;
+    }
+
+    /*----------- BODY --------------*/
+
+
+
+    /*----------- HEADER --------------*/
+
+
+
+    /*----------- NAVIGATION --------------*/
+
+
+
+    /*----------- MAIN --------------*/
+
+
+    @media only screen and (min-width: 64rem) {
+
+        /*----------- FORM --------------*/
+        form {
+            max-width: 50rem;
+        }
+
+        fieldset {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem 2rem;
+        }
+
+        label {
+            margin-top: 0;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+        }
+
+        legend {
+            grid-column: 1 / -1;
+            margin-bottom: 1rem;
+        }
+
+        input[type="submit"] {
+            grid-column: 1 / -1;
+            justify-self: start;
+            width: 100%;
+        }
+    }
+
+
+    /*----------- FOOTER --------------*/
+
+}
+
+/* end of media query */

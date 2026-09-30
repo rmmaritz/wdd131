@@ -1,0 +1,133 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+}
+
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem 2%;
+    background-color: #ddd;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h2 {
+    margin: 0;
+    font-weight: normal;
+}
+
+/*----------- NAVIGATION --------------*/
+nav {
+    background-color: #666;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    border-bottom: solid 1px #333;
+}
+
+nav ul li a {
+    display: block;
+    background-color: #444;
+    color: #eee;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: center;
+}
+
+nav ul li.active a {
+    background-color: #000;
+    color: #fff;
+}
+
+/*----------- MAIN --------------*/
+main {
+    padding: 0 2%;
+    min-height: 20rem;
+}
+
+/*----------- FORM --------------*/
+form {
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f9f9f9;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+legend {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+label {
+    display: block;
+    margin-top: .75rem;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: .5rem;
+    margin-top: .25rem;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    /* makes the button span the full form width */
+    margin-top: 1rem;
+    background: steelblue;
+    color: #fff;
+    border: none;
+    padding: .75rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+    background: darkblue;
+}
+
+
+/*----------- FOOTER --------------*/
+footer {
+    background-color: #ddd;
+    padding: .5rem 2%;
+    text-align: center;
+}
