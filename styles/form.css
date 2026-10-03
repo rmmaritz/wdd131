@@ -122,3 +122,13 @@ legend em {
   font-size: 0.9em;
   font-style: italic;
 }
+
+@media (max-width: 600px) {
+
+  form,
+  h1,
+  footer {
+    max-width: 100%;
+    margin: 0 10px;
+  }
+}

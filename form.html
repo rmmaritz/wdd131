@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Rory O'Connell-Maritz">
   <meta name="description"
-    content="Assignment Week 05 - Product review form that will apply good form design principles, meet specific field requirements, and include a submission confirmation with a counter.">
+    content="Week 05 Product Review Form with required fields, ratings, and confirmation counter.">
   <title>Product Review Form</title>
   <link rel="stylesheet" href="styles/form.css">
   <script src="scripts/form.js" defer></script>
@@ -23,15 +23,15 @@
       <!-- Options populated by JS -->
     </select>
 
-
     <fieldset class="rating">
-      <legend>Overall Rating</legend>
-      <label><input type="radio" name="rating" value="1" required> ★</label>
-      <label><input type="radio" name="rating" value="2"> ★★</label>
-      <label><input type="radio" name="rating" value="3"> ★★★</label>
-      <label><input type="radio" name="rating" value="4"> ★★★★</label>
-      <label><input type="radio" name="rating" value="5"> ★★★★★</label>
+      <legend>Overall Rating <span class="required">(Required)</span></legend>
+      <label for="rating1"><input type="radio" id="rating1" name="rating" value="1" required> ★</label>
+      <label for="rating2"><input type="radio" id="rating2" name="rating" value="2" required> ★★</label>
+      <label for="rating3"><input type="radio" id="rating3" name="rating" value="3" required> ★★★</label>
+      <label for="rating4"><input type="radio" id="rating4" name="rating" value="4" required> ★★★★</label>
+      <label for="rating5"><input type="radio" id="rating5" name="rating" value="5" required> ★★★★★</label>
     </fieldset>
+
 
     <!-- Date of Installation -->
     <label for="installDate">Date of Installation</label>
@@ -41,10 +41,12 @@
       <legend>Which features did you find most useful?<br>
         <em>(Check all that apply)</em>
       </legend>
-      <label><input type="checkbox" name="features" value="Durability"> Durability</label>
-      <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
-      <label><input type="checkbox" name="features" value="Performance"> Performance</label>
-      <label><input type="checkbox" name="features" value="Design"> Design</label>
+      <label for="feature1"><input type="checkbox" id="feature1" name="features" value="Durability"> Durability</label>
+      <label for="feature2"><input type="checkbox" id="feature2" name="features" value="Ease of Use"> Ease of
+        Use</label>
+      <label for="feature3"><input type="checkbox" id="feature3" name="features" value="Performance">
+        Performance</label>
+      <label for="feature4"><input type="checkbox" id="feature4" name="features" value="Design"> Design</label>
     </fieldset>
 
     <!-- Written Review -->
