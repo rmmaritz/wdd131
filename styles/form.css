@@ -35,7 +35,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background: steelblue;
+  background: rgb(4, 48, 83);
   color: white;
   border: none;
   padding: 10px;
@@ -45,7 +45,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background: darkblue;
+  background: rgb(77, 77, 163);
 }
 
 fieldset.rating {
