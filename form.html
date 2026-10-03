@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Rory O'Connell-Maritz">
+  <meta name="description"
+    content="Assignment Week 05 - Product review form that will apply good form design principles, meet specific field requirements, and include a submission confirmation with a counter.">
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+  <h1>Product Review</h1>
+  <form method="get" action="review.html">
+
+    <!-- Product Name -->
+    <label for="productName">Product Name</label>
+    <select id="productName" name="productName" required>
+      <option value="" disabled selected>Select a Product...</option>
+      <!-- Options populated by JS -->
+    </select>
+
+
+    <fieldset class="rating">
+      <legend>Overall Rating</legend>
+      <label><input type="radio" name="rating" value="1" required> ★</label>
+      <label><input type="radio" name="rating" value="2"> ★★</label>
+      <label><input type="radio" name="rating" value="3"> ★★★</label>
+      <label><input type="radio" name="rating" value="4"> ★★★★</label>
+      <label><input type="radio" name="rating" value="5"> ★★★★★</label>
+    </fieldset>
+
+    <!-- Date of Installation -->
+    <label for="installDate">Date of Installation</label>
+    <input type="date" id="installDate" name="installDate" required>
+
+    <fieldset class="features">
+      <legend>Which features did you find most useful?<br>
+        <em>(Check all that apply)</em>
+      </legend>
+      <label><input type="checkbox" name="features" value="Durability"> Durability</label>
+      <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
+      <label><input type="checkbox" name="features" value="Performance"> Performance</label>
+      <label><input type="checkbox" name="features" value="Design"> Design</label>
+    </fieldset>
+
+    <!-- Written Review -->
+    <label for="review">Written Review <span class="optional">(Optional)</span></label>
+    <textarea id="review" name="review"></textarea>
+
+    <!-- User Name -->
+    <label for="username">Your Name <span class="optional">(Optional)</span></label>
+    <input type="text" id="username" name="username">
+
+    <!-- Submit -->
+    <input type="submit" value="Post Review">
+  </form>
+
+  <footer>
+    <p>© <span id="currentyear"></span> ⫴ Rory Maritz ⫴ South Africa</p>
+    <p id="lastmodified">Last Modified: <span id="lastmodifieddate"></span></p>
+  </footer>
+</body>
+
+</html>
