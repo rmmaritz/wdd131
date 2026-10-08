@@ -1,0 +1,383 @@
+/* Defining CSS variables for consistent styling across the project */
+:root {
+  /* Colors */
+  --primary-color: #C0C0C0;
+  --secondary-color: #555555;
+  --accent-color: #b78f9c;
+  --accent-color-hover: #a06f7c;
+  --text-color: #333333;
+  --background-color: #ffffff;
+  --text-colour-light: #ffffff;
+
+  /* Typography */
+  --font-body: 'Open Sans', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-script: 'Dancing Script', cursive;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 40px;
+
+  /* Borders & Radius */
+  --border-radius: 6px;
+  --border-color: var(--secondary-color);
+
+  /* Shadows */
+  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   Base Styles
+========================= */
+body {
+  font-family: var(--font-body);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+/* =========================
+   Header & Navigation
+========================= */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--secondary-color);
+}
+
+.logo img {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+  box-shadow: var(--shadow-light);
+}
+
+.nav-links {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  background-color: var(--secondary-color);
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+header,
+#menu-toggle {
+  position: relative;
+  z-index: 3;
+}
+
+.nav-links.show {
+  display: flex;
+}
+
+.nav-links a.active {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* Base style for hamburger */
+#menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* On larger screens, hide hamburger */
+@media (min-width: 768px) {
+  #menu-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    gap: var(--spacing-lg);
+  }
+}
+
+/* =========================
+   Hero Section
+========================= */
+.hero {
+  text-align: center;
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-xl);
+  background: url("../images/hero-background.webp") center/cover no-repeat;
+  color: var(--secondary-color);
+  position: relative;
+}
+
+.hero h1 {
+  font-family: var(--font-script);
+  font-size: 2.8rem;
+  color: var(--text-colour-light);
+  margin-bottom: var(--spacing-sm);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(85, 85, 85, 0.3);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero h1,
+.hero button,
+.hero a,
+.hero form {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   Buttons
+========================= */
+button {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+}
+
+.accent-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.accent-btn:hover {
+  background-color: #a06f7f;
+  box-shadow: var(--shadow-medium);
+}
+
+.secondary-btn {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.secondary-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Outline button (minimal style) */
+.outline-btn {
+  background: none;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.outline-btn:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+/* =========================
+   Newsletter Section
+========================= */
+.newsletter {
+  background-color: var(--primary-color);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-lg) auto;
+  max-width: 600px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-family: var(--font-heading);
+  margin-bottom: var(--spacing-md);
+  color: var(--text-colour-light);
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.newsletter input {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.newsletter button {
+  align-self: center;
+}
+
+/* =========================
+   Catalog Section
+========================= */
+.catalog {
+  text-align: center;
+  padding: var(--spacing-lg);
+}
+
+/* =========================
+   Featured Products
+========================= */
+.featured {
+  padding: var(--spacing-lg);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+.product-card {
+  background-color: var(--primary-color);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-medium);
+  text-align: center;
+}
+
+.product-card h3 {
+  font-family: var(--font-heading);
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-colour-light)
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-sm);
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-card img {
+    height: 250px;
+  }
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  text-align: center;
+  padding: var(--spacing-md);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Catalog Filters
+========================= */
+.catalog-filters {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.catalog-filters button.active-filter {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: 2px solid var(--accent-color);
+}
+
+/* =========================
+   Contact Form 
+========================= */
+.contact-page {
+  max-width: 600px;
+  margin: auto;
+  padding: var(--spacing-lg);
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.contact-flex {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-flex .map,
+.contact-flex .contact-info {
+  flex: 1;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 768px) {
+  .contact-flex {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&family=Dancing+Script&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/base.js" defer></script>
+  <script src="scripts/home.js" defer></script>
+  <meta name="author" content="Rory O'Connell-Maritz">
+  <meta name="description"
+    content="Home Page of Dance Your Sox Off Suppliers - Sells and suppliers dance socks and accessories.">
+  <title>Home Page - Dance Your Sox Off Suppliers</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo"><img src="images/logo.webp" alt="Logo"></div>
+    <nav class="nav">
+      <button id="menu-toggle" aria-label="Open menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Product Catalog</a></li>
+        <li><a href="contact.html">Contact & Ordering</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 id="hero-title">Dance Your Sox Off Suppliers</h1>
+      <a href="products.html" id="shop-btn" class="accent-btn">Shop Now</a>
+    </section>
+
+    <section class="newsletter">
+      <h2 id="newsletter-title">Sign up for updates</h2>
+      <form id="newsletter-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <button type="submit" id="subscribe-btn" class="outline-btn">Subscribe</button>
+      </form>
+    </section>
+
+    <section class="catalog">
+      <h2>Explore Our Catalog</h2>
+      <p>Ready to order? Browse our products below.</p>
+      <a href="products.html" id="view-products-btn" class="accent-btn">View Products</a>
+    </section>
+
+    <section class="featured">
+      <h2 id="featured-title">Featured Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/product1.webp" alt="Leotards">
+          <h3 id="product1-title">Leotards</h3>
+          <button id="product1-btn" class="secondary-btn">Learn More</button>
+        </div>
+        <div class="product-card">
+          <img src="images/product2.webp" alt="Tights">
+          <h3 id="product2-title">Tights</h3>
+          <button id="product2-btn" class="secondary-btn">Learn More</button>
+        </div>
+        <div class="product-card">
+          <img src="images/product3.webp" alt="Accessories">
+          <h3 id="product3-title">Accessories</h3>
+          <button id="product3-btn" class="secondary-btn">Learn More</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> ⫴ Dance Your Sox Off Suppliers ⫴ South Africa</p>
+    <p id="lastmodified">Last Modified: <span id="lastmodifieddate"></span></p>
+  </footer>
+
+</body>
+
+</html>
