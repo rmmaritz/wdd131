@@ -18,9 +18,7 @@
   </header>
 
   <main>
-
     <form method="get" action="review.html">
-
       <!-- Product Name -->
       <label for="productName">Product Name</label>
       <select id="productName" name="productName" required>
@@ -28,6 +26,7 @@
         <!-- Options populated by JS -->
       </select>
 
+      <!-- Overall Rating -->
       <fieldset class="rating">
         <legend>Overall Rating <span class="required">(Required)</span></legend>
         <label for="rating1"><input type="radio" id="rating1" name="rating" value="1" required> ★</label>
@@ -37,15 +36,13 @@
         <label for="rating5"><input type="radio" id="rating5" name="rating" value="5" required> ★★★★★</label>
       </fieldset>
 
-
       <!-- Date of Installation -->
       <label for="installDate">Date of Installation</label>
       <input type="date" id="installDate" name="installDate" required>
 
+      <!-- Features -->
       <fieldset class="features">
-        <legend>Which features did you find most useful?<br>
-          <em>(Check all that apply)</em>
-        </legend>
+        <legend>Which features did you find most useful?<br><em>(Check all that apply)</em></legend>
         <label for="feature1"><input type="checkbox" id="feature1" name="features" value="Durability">
           Durability</label>
         <label for="feature2"><input type="checkbox" id="feature2" name="features" value="Ease of Use"> Ease of

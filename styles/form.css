@@ -1,40 +1,45 @@
 :root {
   --font-family: Arial, sans-serif;
-  --base-margin: 20px;
-  --base-padding: 10px;
-
-  /* Colors */
-  --background-color: #f9f9f9;
-  --form-background: #ffffff;
   --primary-color: #04105c;
-  --secondary-color: rgb(4, 48, 83);
-  --secondary-hover: rgb(77, 77, 163);
   --accent-color: #560538;
+  --background-color: #f9f9f9;
+  --form-background: #c3baba;
   --text-color: #333;
+  --border-radius: 8px;
   --shadow-color: rgba(0, 0, 0, 0.1);
-
-  /* Borders */
-  --border-radius: 6px;
 }
 
+/* Base layout */
 body {
   font-family: var(--font-family);
-  margin: var(--base-margin);
+  margin: 20px;
   background: var(--background-color);
+  color: var(--text-color);
 }
 
-h1,
+header,
 form,
 footer {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 500px;
+  margin: 10px auto;
   box-sizing: border-box;
+  border-radius: var(--border-radius);
 }
 
+/* Header */
+header h1 {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 0;
+  border-radius: var(--border-radius);
+}
+
+/* Form */
 form {
-  padding: calc(var(--base-padding) * 2.5);
   background: var(--form-background);
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  padding: 20px;
   box-shadow: 0 0 10px var(--shadow-color);
 }
 
@@ -42,76 +47,82 @@ label,
 legend {
   font-weight: bold;
   display: block;
-  margin-top: var(--base-padding);
+  margin-top: 12px;
 }
 
 input,
-select,
-textarea {
+select {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
+  box-sizing: border-box;
 }
 
+textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Submit */
 input[type="submit"] {
-  background: var(--secondary-color);
-  color: white;
-  border: none;
-  padding: var(--base-padding);
+  background: #eaeaea;
+  color: #000;
+  border: 1px solid #999;
+  padding: 12px;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 20px;
+  font-weight: bold;
 }
 
 input[type="submit"]:hover {
-  background: var(--secondary-hover);
+  background: #dcdcdc;
 }
 
+/* Rating fieldset */
 fieldset.rating {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 10px;
+  display: flex;
+  /* Changed from block to flex */
+  flex-direction: row;
+  /* Places rating items side-by-side */
+  justify-content: space-between;
+  /* Spaces the options evenly across the form width */
+  align-items: flex-end;
+  /* Aligns the bases of the options cleanly */
+  border: none;
   margin-top: 15px;
-  border: 1px solid #ccc;
-  padding: 10px;
+  margin-bottom: 20px;
 }
 
 fieldset.rating legend {
-  grid-column: 1 / -1;
-  margin-bottom: 5px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 fieldset.rating label {
-  display: flex;
-  flex: 1 1 160px;
-  justify-content: space-between;
+  display: inline-flex;
+  flex-direction: column-reverse;
   align-items: center;
-  padding: 6px 10px;
-  background: #f9f9f9;
-  border-radius: 4px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+  gap: 6px;
+  margin-right: 0;
+  cursor: pointer;
+  vertical-align: bottom;
+  flex: 1;
+  text-align: center;
 }
 
-/* Stack vertically on very small screens */
-@media (max-width: 500px) {
-  fieldset.rating {
-    grid-template-columns: 1fr;
-    justify-items: start;
-  }
-
-  fieldset.rating label {
-    justify-content: flex-start;
-    gap: 5px;
-  }
-}
-
+/* Features fieldset */
 fieldset.features {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 6px;
+  gap: 8px;
   border: none;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 fieldset.features legend {
@@ -121,53 +132,60 @@ fieldset.features legend {
 fieldset.features label {
   display: flex;
   align-items: center;
-  gap: 10px;
-  white-space: nowrap;
+  gap: 8px;
 }
 
 input[type="checkbox"] {
   margin: 0;
 }
 
-footer,
-h1 {
-  text-align: center;
-  padding: var(--base-padding);
-  background-color: var(--primary-color);
-  color: #fff;
-}
-
-footer {
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
-}
-
-h1 {
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
-  margin-bottom: 0;
-}
-
-footer p {
-  margin: 5px 0;
-}
-
-legend em {
-  font-style: italic;
-  font-size: 0.95em;
-  color: var(--text-color);
-}
-
+/* Optional text */
 .optional {
   color: var(--accent-color);
   font-size: 0.9em;
   font-style: italic;
 }
 
-@media (max-width: 600px) {
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
 
   form,
-  h1,
+  header,
   footer {
     max-width: 100%;
     margin: 0 10px;
   }
+
+  fieldset.rating {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  fieldset.rating label {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-right: 0;
+    margin-bottom: 8px;
+    align-items: center;
+  }
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin: 0;
 }
