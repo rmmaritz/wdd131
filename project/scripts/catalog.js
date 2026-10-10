@@ -3,7 +3,7 @@ const products = [
   {
     id: "leotard1",
     category: "leotards",
-    name: "Classic Black Leotard",
+    name: "RAD Black Leotard",
     imageUrl: "images/leotard1.webp",
     description: "Comfortable and durable leotard for practice.",
     sizes: "8 - 14"
@@ -11,41 +11,41 @@ const products = [
   {
     id: "leotard2",
     category: "leotards",
-    name: "Red Performance Leotard",
+    name: "Red Spider Strap Leotard",
     imageUrl: "images/leotard2.webp",
-    description: "Bright red leotard for stage performance.",
+    description: "Spider strap leotard for stage performance.",
     sizes: "12 - 18"
   },
   {
     id: "tights1",
     category: "tights",
-    name: "Pink Ballet Tights",
+    name: "Footless Honey Tights",
     imageUrl: "images/tights1.webp",
-    description: "Soft ballet tights in pink.",
+    description: "For Contemporary Dance.",
     sizes: "8 - 14"
   },
   {
     id: "tights2",
     category: "tights",
-    name: "Black Dance Tights",
+    name: "Convertible Pink Tights",
     imageUrl: "images/tights2.webp",
-    description: "Durable tights for practice and performance.",
+    description: "Tights for Ballet Dancing.",
     sizes: "12 - 18"
   },
   {
     id: "accessory1",
     category: "accessories",
-    name: "Dance Bag",
+    name: "Shoe Covers",
     imageUrl: "images/accessory1.webp",
-    description: "Spacious bag for all your dance gear.",
-    sizes: "One Size"
+    description: "Shoe covers for protection of dance shoes.",
+    sizes: "1 - 10"
   },
   {
     id: "accessory2",
     category: "accessories",
-    name: "Water Bottle",
+    name: "Hair Kit",
     imageUrl: "images/accessory2.webp",
-    description: "Stay hydrated during practice.",
+    description: "Hair care kit for dancers.",
     sizes: "One Size"
   }
 ];
