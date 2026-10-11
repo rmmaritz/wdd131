@@ -218,3 +218,34 @@ footer p {
   font-size: 0.9em;
   color: rgb(251, 128, 128);
 }
+
+@media (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    /* stack everything vertically */
+    align-items: center;
+    padding: 0 var(--space-sm);
+  }
+
+  .web-resources {
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
+    margin-top: var(--space-md);
+  }
+
+  .about-me,
+  .location {
+    width: 100%;
+  }
+
+  .about-me-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-image {
+    margin: var(--space-md) 0 0 0;
+  }
+}
