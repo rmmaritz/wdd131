@@ -127,6 +127,28 @@ header {
 }
 
 /* =========================
+   Footer
+========================= */
+footer {
+  text-align: center;
+  padding: var(--spacing-sm);
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+  font-size: 0.8rem;
+  margin-top: auto;
+}
+
+footer a {
+  color: var(--text-color-light);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
    Hero Section
 ========================= */
 .hero {
