@@ -1,4 +1,3 @@
-/* Defining CSS variables for consistent styling across the project */
 :root {
   /* Colors */
   --primary-text: #222222;
@@ -36,11 +35,11 @@ html,
 body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* =========================
-   Base Styles
-========================= */
 body {
   font-family: var(--font-body);
   background-color: var(--background-color);
@@ -48,32 +47,8 @@ body {
   line-height: 1.6;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 main {
   flex: 1;
-}
-
-h1,
-h2,
-h3 {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--primary-text);
-  text-align: center;
-  margin-bottom: var(--spacing-sm);
-}
-
-p {
-  margin-bottom: var(--spacing-md);
 }
 
 /* =========================
@@ -109,27 +84,8 @@ header {
   border-radius: var(--border-radius);
 }
 
-.nav-links li a {
-  text-decoration: none;
-  color: var(--text-color-light);
-  font-family: var(--font-heading);
-  font-weight: 600;
-}
-
-header,
-#menu-toggle {
-  position: relative;
-  z-index: 3;
-}
-
 .nav-links.show {
   display: flex;
-}
-
-.nav-links a.active {
-  color: var(--text-color-light);
-  text-decoration: underline;
-  font-size: 1.1rem;
 }
 
 #menu-toggle {
@@ -276,24 +232,22 @@ button {
 
 .product-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: var(--spacing-lg);
+  align-items: stretch;
   padding: 0 var(--spacing-lg);
   margin-bottom: var(--spacing-lg);
+  box-sizing: border-box;
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--primary-bg);
   padding: var(--spacing-md);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-medium);
   text-align: center;
-}
-
-.product-card h3 {
-  font-family: var(--font-heading);
-  margin-bottom: var(--spacing-sm);
-  color: var(--text-color-dark);
 }
 
 .product-card img {
@@ -321,25 +275,15 @@ button {
   }
 }
 
-/* =========================
-   Footer
-========================= */
-footer {
-  text-align: center;
-  padding: var(--spacing-sm);
-  background-color: var(--secondary-color);
-  color: var(--text-color-light);
-  font-size: 0.8rem;
-  margin-top: auto;
-}
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 0;
+  }
 
-footer a {
-  color: var(--text-color-light);
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
+  .product-card img {
+    height: 150px;
+  }
 }
 
 /* =========================
@@ -379,62 +323,10 @@ footer a:hover {
   border: 2px solid var(--accent-color);
 }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: var(--spacing-lg);
-  align-items: stretch;
-}
-
-.product-card {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--primary-bg);
-  padding: var(--spacing-md);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-medium);
-  text-align: center;
-}
-
-.product-card img {
-  max-width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: var(--border-radius);
-  margin-bottom: var(--spacing-sm);
-}
-
-.product-card h3 {
-  font-family: var(--font-heading);
-  margin-bottom: var(--spacing-sm);
-}
-
-.product-card p {
-  flex-grow: 1;
-  /* keeps spacing consistent */
-}
-
-.product-card .accent-btn {
-  align-self: center;
-  margin-top: var(--spacing-md);
-}
-
 @media (min-width: 768px) {
   .catalog-filters button {
     flex: 0 0 auto;
     min-width: 150px;
-  }
-}
-
-@media (max-width: 480px) {
-  .product-grid {
-    grid-template-columns: 1fr;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding: 0;
-  }
-
-  .product-card img {
-    height: 150px;
   }
 }
 
