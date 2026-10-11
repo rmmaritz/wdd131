@@ -82,6 +82,7 @@ header {
   right: 20px;
   padding: var(--spacing-md);
   border-radius: var(--border-radius);
+  z-index: 5;
 }
 
 .nav-links.show {
@@ -94,6 +95,21 @@ header {
   border: none;
   color: var(--text-color-light);
   cursor: pointer;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-color-light);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+/* Active link styling for current page */
+.nav-links li a.active {
+  color: var(--text-color-light);
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: underline;
 }
 
 @media (min-width: 768px) {
