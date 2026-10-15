@@ -58,8 +58,8 @@ function displayProducts(productArray) {
   productArray.forEach(product => {
     const card = `
       <div class="product-card">
-        <img src="${product.imageUrl}" alt="${product.name}">
-        <h3>${product.name}</h3>
+        <img src="${product.imageUrl}" alt="${product.name}" loading="lazy">
+        <h2>${product.name}</h2>
         <p>${product.description}</p>
         <p>Sizes: ${product.sizes}</p>
         <button id="${product.id}-btn" class="secondary-btn">Inquire</button>
